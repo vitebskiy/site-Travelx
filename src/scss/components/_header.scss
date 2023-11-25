@@ -1,0 +1,92 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable order/properties-order */
+.header {
+  position: relative;
+  height: 100vh;
+
+  &__content {
+    position: absolute;
+    left: 70px;
+    right: 50px;
+    top: 50px;
+    bottom: 80px;
+    z-index: 10;
+    pointer-events: none;
+
+    &__nav {
+      pointer-events: all;
+    }
+
+    @include middle-desktop {
+      left: 40;
+      right: 40px;
+      top: 40px;
+      bottom: 60px;
+    }
+
+    @include small-tablet {
+      left: 5%;
+      right: 5%;
+      top: 30px;
+      bottom: 30px;
+    }
+  }
+
+  &__socials {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: all;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__see-more {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    pointer-events: all;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__slider-controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: all;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__scrollbar {
+    pointer-events: all;
+    width: 326px;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    transform: rotate(90deg) translate(50%, 0);
+    transform-origin: right;
+
+    @include small-tablet {
+      transform: none;
+      top: unset;
+      left: 0;
+      right: unset;
+      width: 100%;
+      bottom: -15px;
+    }
+
+    @media (max-height: 700px) {
+      width: 300px;
+    }
+  }
+}

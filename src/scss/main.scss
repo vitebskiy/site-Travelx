@@ -1,0 +1,16 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/nav";
+@import "./components/socials";
+@import "./components/see-more";
+@import "./components/slider-controls";
+@import "./components/slide";
+@import "./components/locations";
+@import "./components/swiper";
+@import "./components/mobile-nav";
